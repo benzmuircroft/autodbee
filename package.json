@@ -1,0 +1,38 @@
+{
+  "name": "autodbee",
+  "version": "2.0.0",
+  "description": "A MongoDB-like database built on top of Hyperbee with support for indexing",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "npm run lint && node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benzmuircroft/autodbee.git"
+  },
+  "keywords": [
+    "hyperbee",
+    "index",
+    "db",
+    "p2p",
+    "database"
+  ],
+  "author": "benzmuircroft",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/benzmuircroft/autodbee/issues"
+  },
+  "homepage": "https://github.com/benzmuircroft/autodbee#readme",
+  "dependencies": {
+    "bson": "^4.3.0",
+    "cbor": "^8.1.0"
+  },
+  "devDependencies": {
+    "hyperbee": "2.0.1",
+    "hypercore": "^9.9.1",
+    "random-access-memory": "^3.1.2",
+    "standard": "^16.0.3",
+    "tape": "^5.2.2"
+  }
+}
