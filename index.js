@@ -168,7 +168,7 @@ class Collection {
 
     const [doc] = results
 
-    if (!doc) throw new Error('not found')
+    if (!doc) return false // throw new Error('not found')
 
     return doc
   }
