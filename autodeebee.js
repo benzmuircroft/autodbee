@@ -76,7 +76,7 @@ async function applyAutobeeBatch (bee, batch) {
   const b = bee.batch({ update: false })
   for (const node of batch) {
     const op = JSON.parse(node.value.toString())
-    const bufKey = getKeyBufferWithPrefix(op.key, op.prefix)
+    const bufKey = getKeyBufferWithPrefix(op.key || op.value, op.prefix) // fixed
     if (op.type === 'put') {
       await b.put(bufKey, b4a.from(op.value))
     }
