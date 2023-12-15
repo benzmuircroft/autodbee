@@ -1,4 +1,7 @@
-# hyperbeedeebee
+# autodbee
+
+Benz: My attempt to get this old code to work ...
+
 A MongoDB-like database built on top of Hyperbee with support for indexing
 
 **WIP:** There may be breaking changes in the indexing before the v1.0.0 release, don't use this for anything you don't mind migrating in the future.
