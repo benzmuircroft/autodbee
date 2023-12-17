@@ -146,7 +146,7 @@ class Collection {
       const initialDoc = {}
       for (const queryField of Object.keys(query)) {
         const queryValue = query[queryField]
-        const isobj = isQueryObject(queryValue)
+        const isObj = isQueryObject(queryValue)
         if (isObj && '$eq' in queryValue) initialDoc[queryField] = queryValue.$eq
         else if (!isQueryObject(queryValue)) initialDoc[queryField] = queryValue
       }
