@@ -152,6 +152,8 @@ class Collection {
 
       const newDoc = performUpdate(initialDoc, update)
 
+      console.log(queryValue, initialDoc, update, newDoc);
+
       await this.insert(newDoc)
       nUpserted++
     }
