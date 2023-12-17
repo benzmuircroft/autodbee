@@ -146,13 +146,12 @@ class Collection {
       const initialDoc = {}
       for (const queryField of Object.keys(query)) {
         const queryValue = query[queryField]
-        if (!isQueryObject(queryValue)) initialDoc[queryField] = queryValue
-        else if ('$eq' in queryValue) initialDoc[queryField] = queryValue.$eq
+        const isobj = isQueryObject(queryValue)
+        if (isObj && '$eq' in queryValue) initialDoc[queryField] = queryValue.$eq
+        else if (!isQueryObject(queryValue)) initialDoc[queryField] = queryValue
       }
 
       const newDoc = performUpdate(initialDoc, update)
-
-      console.log(queryValue, initialDoc, update, newDoc);
 
       await this.insert(newDoc)
       nUpserted++
