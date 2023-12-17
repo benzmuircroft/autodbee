@@ -146,8 +146,8 @@ class Collection {
       const initialDoc = {}
       for (const queryField of Object.keys(query)) {
         const queryValue = query[queryField]
-        if ('$eq' in queryValue) initialDoc[queryField] = queryValue.$eq
-        else if (!isQueryObject(queryValue)) initialDoc[queryField] = queryValue
+        if (!isQueryObject(queryValue)) initialDoc[queryField] = queryValue
+        else if ('$eq' in queryValue) initialDoc[queryField] = queryValue.$eq
       }
 
       const newDoc = performUpdate(initialDoc, update)
